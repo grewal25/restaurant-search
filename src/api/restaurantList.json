@@ -1,0 +1,65 @@
+{
+	"restaurantList": [
+	  {
+		"delhi": [
+		  {
+			"id": 1,
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["indian"]
+		  },
+		  {
+			"name": "Delhi Canadian Rest",
+			"address": "1023 bloor sr",
+			"cuisine": ["canadian"]
+		  },
+		  {
+			"name": "Delhi chiense Rest",
+			"address": "556 king st",
+			"cuisine": ["chinese"]
+		  }
+		]
+	  },
+	  {
+		"toronto": [
+		  {
+			"id": 2,
+			"name": "toronto Indian Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["indian"]
+		  },
+		  {
+			"name": "toronto Canadian Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["canadian"]
+		  },
+		  {
+			"name": "toronto chiense Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["chinese"]
+		  }
+		]
+	  },
+	  {
+		"newyork": [
+		  {
+			"id": 3,
+			"name": "newyork Indian Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["indian"]
+		  },
+		  {
+			"name": "newyork Indian Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["canadian"]
+		  },
+		  {
+			"name": "newyork Indian Rest",
+			"address": "R!fsgas R!fsgas",
+			"cuisine": ["chinese"]
+		  }
+		]
+	  }
+	]
+  }
+  
