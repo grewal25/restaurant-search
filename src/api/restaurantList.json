@@ -1,62 +1,71 @@
 {
 	"restaurantList": [
 	  {
-		"delhi": [
+		"toronto": [
 		  {
 			"id": 1,
-			"name": "Delhi Indian Rest",
+			"name": "MacDonalds",
 			"address": "123 main st",
-			"cuisine": ["indian"]
+			"cuisine": ["western"],
+			"rating": "4/5"
 		  },
 		  {
 			"name": "Delhi Canadian Rest",
 			"address": "1023 bloor sr",
-			"cuisine": ["canadian"]
+			"cuisine": ["canadian"],
+			"rating": "4/5"
 		  },
 		  {
 			"name": "Delhi chiense Rest",
 			"address": "556 king st",
-			"cuisine": ["chinese"]
+			"cuisine": ["chinese"],
+			"rating": "4/5"
 		  }
 		]
 	  },
 	  {
-		"toronto": [
+		"ottawa": [
 		  {
 			"id": 2,
-			"name": "toronto Indian Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["indian"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["indian"],
+			"rating": "4/5"
 		  },
 		  {
-			"name": "toronto Canadian Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["canadian"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["canadian"],
+			"rating": "4/5"
 		  },
 		  {
-			"name": "toronto chiense Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["chinese"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["chinese"],
+			"rating": "4/5"
 		  }
 		]
 	  },
 	  {
-		"newyork": [
+		"melbourne": [
 		  {
 			"id": 3,
-			"name": "newyork Indian Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["indian"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["indian"],
+			"rating": "4/5"
 		  },
 		  {
-			"name": "newyork Indian Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["canadian"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["canadian"],
+			"rating": "4/5"
 		  },
 		  {
-			"name": "newyork Indian Rest",
-			"address": "R!fsgas R!fsgas",
-			"cuisine": ["chinese"]
+			"name": "Delhi Indian Rest",
+			"address": "123 main st",
+			"cuisine": ["chinese"],
+			"rating": "4/5"
 		  }
 		]
 	  }

@@ -5,6 +5,8 @@ import { getRestaurant, refineRestaurantSearch } from "../../action/index";
 import "./Main.css";
 
 class Main extends React.Component {
+// showNoCityError is to show the no city found statement only when user type in the 
+// input box
 
   showNoCityError = false;
 
@@ -12,7 +14,7 @@ class Main extends React.Component {
 
     this.props.getRestaurant(this.textInput.value, true);
   };
-
+//this submit function will work when user type a particular cuisine
   onRefineSubmit = (event) => {
     console.log(event.keycode);
     if (event.keyCode === 13) {
