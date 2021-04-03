@@ -6,19 +6,23 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axe-webdriverjs": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.3",
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "selenium-webdriver": "^4.0.0-beta.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "cypress": "cypress open",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +41,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "axe-core": "^4.1.4",
+    "chromedriver": "^89.0.0",
+    "cypress": "^6.8.0",
+    "cypress-axe": "^0.12.2",
+    "eslint": "^7.23.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1"
+  },
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "end-to-end-testing.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grewal25/restaurant-search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grewal25/restaurant-search/issues"
+  },
+  "homepage": "https://github.com/grewal25/restaurant-search#readme"
 }

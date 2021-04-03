@@ -5,16 +5,14 @@ import { getRestaurant, refineRestaurantSearch } from "../../action/index";
 import "./Main.css";
 
 class Main extends React.Component {
-  componentDidUpdate() {
-    // console.log(this.props);
-  }
+
   showNoCityError = false;
 
   submit = () => {
-    // this.showNoCityError = true;
+
     this.props.getRestaurant(this.textInput.value, true);
   };
-  // ,console.log("text input is ", this.textInput.value)
+
   onRefineSubmit = (event) => {
     console.log(event.keycode);
     if (event.keyCode === 13) {
@@ -36,8 +34,10 @@ class Main extends React.Component {
           {this.props.searchedRestaurantList <= 0 && (
             <div className="search-text">{"Please type name of the city"}</div>
           )}
-
-          <input
+        <div id="input-box">
+        <input
+            aria-describedby="search-city"
+            aria-label="label-search"
             onChange={this.submit}
             type="text"
             placeholder="Enter city"
@@ -45,8 +45,8 @@ class Main extends React.Component {
               this.textInput = ref;
             }}
           />
+        </div>
 
-          {/* <button onClick={this.submit}>Search Restaurant</button> */}
 
           <div className="rest-list">
             {(
@@ -57,9 +57,11 @@ class Main extends React.Component {
               this.props.searchedRestaurantList.length > 0 &&
               this.props.searchedRestaurantList.map((value, index) => (
                 <div key={index} className="items">
+                  
                   <p>{value.name}</p>
                   <p>Address:{value.address}</p>
                   <p>Cuisine: {value.cuisine}</p>
+                 
                 </div>
               ))}
           </div>
@@ -82,14 +84,17 @@ class Main extends React.Component {
           {this.props.searchedRestaurantList.length > 0 && (
             <>
               <input
+                aria-describedby="search-cuisine"
                 onKeyUp={(event) => this.onRefineSubmit(event)}
-                defaultValue=""
                 type="text"
                 ref={(ref) => (this.refineInput = ref)}
               />
 
-              <button onClick={this.onRefineSubmit}>Cuisine Restaurants</button>
-
+              <button 
+              onClick={this.onRefineSubmit}
+              aria-label="label-button"
+              >Cuisine Restaurants
+              </button>
               {this.props.refinedCuisineList.length > 0 &&
                 this.props.refinedCuisineList.map((value, index) => (
                   <div key={index}>
@@ -114,6 +119,3 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = { getRestaurant, refineRestaurantSearch };
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
-
-//const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
-// export default Main

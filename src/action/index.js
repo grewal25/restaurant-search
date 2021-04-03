@@ -13,7 +13,6 @@ export const getRestaurant = (location, showNoCityError) => async (
   dispatch
 ) => {
   let restaurantByLocation;
-  let numberOfCities;
   showNoCityError = true;
   console.log(showNoCityError);
   const restaurantList = restaurants.restaurantList;
