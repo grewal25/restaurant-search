@@ -12,7 +12,7 @@ class Main extends React.Component {
   
     submit = () => {
   
-      this.props.getRestaurant(this.textInput.value, true);
+      this.props.getRestaurant(this.textInput.value.toLowerCase(), true);
     };
   //this submit function will work when user type a particular cuisine
     onRefineSubmit = (event) => {
