@@ -18,7 +18,7 @@ class Main extends React.Component {
     onRefineSubmit = (event) => {
 
         this.props.refineRestaurantSearch(
-          this.refineInput.value,
+          this.refineInput.value.toLowerCase(),
           this.props.searchedRestaurantList
         );
     };
