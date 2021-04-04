@@ -1,4 +1,4 @@
-// require('chromedriver');
+
 
 const WebDriver = require('selenium-webdriver');
 const AxeBuilder = require('axe-webdriverjs');
@@ -12,7 +12,7 @@ driver
     .then(() => {
         AxeBuilder(driver).analyze((err, results) => {
             if (err) {
-                // handle error
+                console.log(err)
             }
             console.log(results);
         });

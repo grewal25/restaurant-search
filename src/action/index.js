@@ -10,7 +10,6 @@ export const getRestaurant = (location, showNoCityError) => async (
 ) => {
   let restaurantByLocation;
   showNoCityError = true;
-  console.log(showNoCityError);
   const restaurantList = restaurants.restaurantList;
   for (let index = 0; index < restaurantList.length; index++) {
     const element = restaurantList[index];

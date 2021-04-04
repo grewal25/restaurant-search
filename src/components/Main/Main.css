@@ -1,40 +1,234 @@
 .container {
-    margin: 100px 300px 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+  
+.main-header {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.main-header .main-text {
+    /* border-bottom: 2px solid black; */
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+    font-family: 'Rubik', sans-serif;
+    /* margin-bottom: 30px; */
+    padding-bottom: 5px;
+}
+
+
+input {
+    font-size: 1.2rem;
+    width: 550px;
+    margin-top: 0px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 2px solid black;
+    outline: none;
+    background: transparent;
+}
+
+
+.rest-list {
+    width: 80%;
+    margin-top: 20px;
+    padding: 5px 50px 25px 50px;
+    font-size: 1.05rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+  
+}
+
+.items {
+    margin-top: 25px;
+    padding: 0px 20px 10px 20px;
+    transition: 0.3s;
+    background: rgb(233, 234, 235);
+    border-radius: 20px;
+}
+
+.para-top {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.para1 {
+    font-weight: bold;
+    justify-content: flex-end;
+    line-height: 20px;
+    font-size: 1.1rem;
+}
+
+.para3 {
+    margin-top: 4px;
+}
+
+.para-kinds {
+    font-size: 1.5rem;
+    width: 75%;
+}
+
+
+
+.info-cuisine {
+    width: 75%;
+    margin-top: 20px;
+    padding: 25px 50px 25px 50px;
+    font-size: 1.05rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+}
+
+.each-cuisine {
+  margin-top: 25px;
+  padding: 10px 20px 10px 20px;
+  transition: 0.3s;
+  background: rgb(233, 234, 235);
+  border-radius: 50px;
+}
+
+.cuisine-top {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.cuisine-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        margin: 100px 100px 0 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px 50px 0 20px;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+  .main-text h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+  input {
+      width: 500px;
+  }
+  .rest-list {
+    width: 75%;
+    padding: 15px 30px 15px 30px;
+  }
+  .items {
+    text-align: center;
+  }
+  .para-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .para1 {
+    margin-bottom: 5px;
+  }
+  .cuisine-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .cuisine-name {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 400px;
+  }
+  .info-cuisine {
+    width: 75%;
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 490px) {
+  .main-text h1 {
+    margin-top: 1px;
+    font-size: 2rem;
+  }
+  input {
+      width: 350px;
+      padding: 7px 15px;
+  }
+  .rest-list {
+    width: 75%;
+    padding: 15px 30px 15px 30px;
 
   }
-  
-  .main-header .main-text {
-    background: black;
-    color: white;
-  }
-  
-  .main-header .search-text {
-    font-size: 24px;
-    padding: 20px;
-    margin-bottom: 40px;
-    background: #023047;
-    color: white;
-  }
-  
-  input {
-    font-size: 24px;
-  }
-  
   .items {
-    margin-top: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    text-align: center;
+    font-size: 1rem;
   }
-  
-  @media only screen and (max-width: 1000px) {
-    .container {
-      margin: 100px 100px 0 100px;
-    }
+  .cuisine-top {
+    font-size: 1rem;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .container {
-      margin: 20px 50px 0 20px;
-    }
+
+  .para-kinds {
+    font-size: 1.25rem;
   }
-  
+
+}
+
+@media (max-width: 410px) {
+  .main-text h1 {
+    font-size: 1.5rem;
+  }
+  input {
+      width: 200px;
+  }
+  .rest-list {
+    width: 85%;
+    padding: 5px 15px 15px 15px;
+  }
+  .items {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .cuisine-name,
+  .cuisine-top {
+    font-size: 0.9rem;
+  }
+  .para-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .para1 {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
+  .para-kinds {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
+
+  .info-cuisine {
+    width: 85%;
+    text-align: center;
+    padding: 15px 30px 15px 30px;
+  }
+}
