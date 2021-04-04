@@ -37,7 +37,7 @@ class Main extends React.Component {
               aria-label="label-search"
               onChange={this.submit}
               type="text"
-              placeholder="Find restaurant in your city"
+              placeholder="Find restaurant"
               
               ref={(ref) => {
                 this.textInput = ref;
