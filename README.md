@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Restaurant Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this app, we have added 3 cities, Ottawa, Toronto and Montreal. You can search
+restaurants by city name and further with the type of cuisine. 
 
 ## Available Scripts
 
