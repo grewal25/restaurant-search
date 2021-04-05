@@ -68,15 +68,22 @@ input {
 
 .para3 {
     margin-top: 4px;
+   
+    
 }
 
 .para-kinds {
     font-size: 1.5rem;
     width: 75%;
+  
+    
 }
 
+.input-search-field{
 
-
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .info-cuisine {
     width: 75%;
     margin-top: 20px;
@@ -84,7 +91,9 @@ input {
     font-size: 1.05rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 10px;
+    
 }
+
 
 .each-cuisine {
   margin-top: 25px;

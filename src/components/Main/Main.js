@@ -37,7 +37,7 @@ class Main extends React.Component {
               aria-label="label-search"
               onChange={this.submit}
               type="text"
-              placeholder="Find restaurant"
+              placeholder="Enter City"
               
               ref={(ref) => {
                 this.textInput = ref;
@@ -49,7 +49,7 @@ class Main extends React.Component {
   
             {this.props.showNoCityError &&
               this.props.searchedRestaurantList.length === 0 &&
-              "Please enter city name for info"
+              "sorry, no city found :("
             }
   
               
@@ -89,6 +89,7 @@ class Main extends React.Component {
             )}
             {this.props.searchedRestaurantList.length > 0 && (
               <>
+              <div className="input-search-field">
                 <input
                 placeholder="Search for cuisine type"
                   aria-describedby="search-cuisine"
@@ -96,7 +97,7 @@ class Main extends React.Component {
                   type="text"
                   ref={(ref) => (this.refineInput = ref)}
                 />
-  
+            </div>
                 {this.props.refinedCuisineList.length > 0 &&
                   this.props.refinedCuisineList.map((value, index) => (
                       <div key={index} className='info-cuisine'>
