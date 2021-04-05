@@ -1,6 +1,80 @@
 
 1. I spent 6 hours coding, 30 mins on writing automation scripts for accessibililty and UI. If I have more time, I would build a better search options with more fileds and filter options like near to your place, filtered by rating etc. 
-2. The 
+2. I was using class based components when I started working React. However, I when I used functional programming and especially Hooks in React, I really liked it. I used useState, useRef hook few to make this game
+
+```javascript
+import { useEffect, useState, useRef } from "react"
+     const STARTING_TIME = 60
+
+export default function WritingText(){
+    const [initialText, setInitialText] = useState("")
+    const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
+    const [startTimer, setStartTimer] = useState(false)
+    const [wordCount, setWordCount] = useState(0)
+    const textBoxRef = useRef(null)
+
+    function handleChange(e){
+        const { value } = e.target;
+        setInitialText(value)
+         
+    }
+    
+    function calculateWord(text){
+        const wordsArr = text.trim().split(" ");
+        return  wordsArr.filter((word)=> word !== "").length
+    }
+
+    function endGame(){
+        setStartTimer(false)
+        setWordCount(calculateWord(initialText))
+    }
+    useEffect(()=>{
+        if(startTimer  && timeRemaining > 0){
+            setTimeout(()=>{
+                setTimeRemaining(time => time - 1)
+            }, 1000)
+        } else if (timeRemaining === 0){
+            endGame()
+            // console.log(numWords)
+        }
+    }, [timeRemaining, startTimer])
+
+    function restartStage(){
+        setStartTimer(true)
+        setTimeRemaining(STARTING_TIME)
+        setInitialText("")
+        textBoxRef.current.disabled = false
+        textBoxRef.current.focus()
+    }
+    return(
+        <div className="main">
+        <h1>Please type here</h1>
+        <textarea 
+            ref = {textBoxRef}
+            onChange = {handleChange}
+            value = {initialText}
+            disabled = {!startTimer}
+        />
+         <br />  <br /> <br /> 
+        Time remaining : {timeRemaining}
+        <br />  <br /> <br /> 
+        <button
+        onClick={restartStage}
+        disabled = {startTimer}
+        >start</button> 
+
+            <br /> 
+            
+            <br />
+        Total words you Count : {wordCount}
+      
+        
+        </div>
+    )
+}
+```
+
+
 3. The performance issue in production can be tracked down using tools like Locust. I did few load testing in the initial stage of the project when we had to launch it for the first time using Locust to check how effectively our application scales to a large number of users. 
 If I have to do tracking of performance issue, I would use Kibana. Although I have not used much in my last job but I think it is a great tool for measuring performance.
 
@@ -19,7 +93,5 @@ If I have to do tracking of performance issue, I would use Kibana. Although I ha
         "read books":"yes",
         "writetutorials":"yes",
     }
-
-
 }
 ```
