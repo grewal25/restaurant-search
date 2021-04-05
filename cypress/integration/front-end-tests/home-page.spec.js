@@ -1,8 +1,6 @@
 
-
 describe('Test cases for Searching Restaurant Page', () => {
 
-  
     beforeEach(() => {
       cy.visit("")
     })
