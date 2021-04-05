@@ -55,17 +55,14 @@ export default function WritingText(){
             value = {initialText}
             disabled = {!startTimer}
         />
-         <br />  <br /> <br /> 
+         
         Time remaining : {timeRemaining}
-        <br />  <br /> <br /> 
+      
         <button
         onClick={restartStage}
         disabled = {startTimer}
         >start</button> 
 
-            <br /> 
-            
-            <br />
         Total words you Count : {wordCount}
       
         
@@ -73,7 +70,97 @@ export default function WritingText(){
     )
 }
 ```
+Secondly, I used Context API in React to uplift the state. I think this is a great new feature:
+```javascript
+import React, {createContext, useState} from 'react';
 
+export const ProductContext = createContext();
+
+export function ProductProvider(props){
+  const [products] = useState([
+    {
+      category: 'Vegetables',
+      name: 'Potatoes',
+      price: 2.99,
+      image: '../../photos/potatoes.jpeg'
+    },
+    {
+      category: 'Vegetables',
+      name: 'Carrots',
+      price: 2.99,
+      image: '../../photos/carrots.jpeg'
+    },
+    {
+      category: 'Juices',
+      name: 'Apple Juice',
+      price: 2.99,
+      image: '../../photos/apple_juice.jpeg'
+    },
+    {
+      category: 'Fruits',
+      name: 'Oranges',
+      price: 2.99,
+      image: '../../photos/oranges.jpeg'
+    },
+    {
+      category: 'Fruits',
+      name: 'Banana',
+      price: 2.99,
+      image: '../../photos/banana.jpeg'
+    },
+    {
+      category: 'Vegetables',
+      name: 'Onion',
+      price: 2.99,
+      image: '../../photos/onion.jpeg'
+    }
+  ])
+
+      return (
+          <div>
+              <ProductContext.Provider value={[products]}>
+                    {props.children}
+              </ProductContext.Provider>
+          </div>
+      )
+}
+
+```
+this way it is easier to uplift states without passing down the props to components that don't need them.
+
+```javascript
+import React, {useContext} from 'react';
+
+import {ProductContext} from '../../context/ItemListContext';
+
+export default function Content({addToCart}){
+  const [products]= useContext(ProductContext)
+  
+    return(
+        <div className="content">
+          
+          <header>
+           
+          </header>
+          <div className="products">
+          {products.map((product,idx)=>(
+            <div key={idx}
+            className="product-info">
+              <h3>{product.category}</h3>
+              <h3>{product.name}</h3>
+              <img src={product.image} alt={product.name}/>
+                <p>${product.price}</p>
+              <button onClick={()=>addToCart(product)}
+              className="product-button">Add to Cart</button>
+            </div>
+          ))}
+          </div>
+        
+        </div>
+    )
+}
+
+```
 
 3. The performance issue in production can be tracked down using tools like Locust. I did few load testing in the initial stage of the project when we had to launch it for the first time using Locust to check how effectively our application scales to a large number of users. 
 If I have to do tracking of performance issue, I would use Kibana. Although I have not used much in my last job but I think it is a great tool for measuring performance.
